@@ -26,5 +26,11 @@ public class Main {
         System.out.println(classificacao);
 
 
+        int contador = 1;
+        while (contador <= 10){
+            System.out.println(contador);
+
+        }
+
     }
 }
