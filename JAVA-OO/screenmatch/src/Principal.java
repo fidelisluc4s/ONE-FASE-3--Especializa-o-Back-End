@@ -15,11 +15,18 @@ public class Principal {
 //        System.out.println(String.format("%.2f",meuFilme.retornarMedia()));
 //    }
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
+//
+//        Pessoa pessoa1 = new Pessoa();
+//        pessoa1.nome = "Lucas";
+//        pessoa1.idade = 32;
+//        pessoa1.olaMundo();
+//    }
+public static void main(String[] args) {
 
-        Pessoa pessoa1 = new Pessoa();
-        pessoa1.nome = "Lucas";
-        pessoa1.idade = 32;
-        pessoa1.olaMundo();
-    }
+    Calculadora multi = new Calculadora();
+
+    System.out.println(multi.doubloValor(2));
+
+}
 }
