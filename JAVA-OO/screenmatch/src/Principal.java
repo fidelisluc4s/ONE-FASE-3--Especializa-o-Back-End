@@ -29,19 +29,42 @@ public class Principal {
 //    System.out.println(multi.doubloValor(2));
 //
 //}
-public static void main(String[] args) {
+//public static void main(String[] args) {
+//
+//    Musica musica1 = new Musica();
+//
+//    musica1.titulo = "Link Park";
+//    musica1.artista = "Chester";
+//    musica1.anoLancamento = 2002;
+//
+//    musica1.fichaTecnica();
+//    musica1.avaliar(5);
+//    musica1.avaliar(3);
+//    System.out.println(musica1.somaAvaliacao);
+//    System.out.println(musica1.numAvaliacoes);
+//    System.out.println(musica1.mediaAvaliacao());
+//}
 
-    Musica musica1 = new Musica();
+//    public static void main(String[] args) {
+//        Carro carro1 = new Carro();
+//
+//        carro1.modeloCarro = "Corsa";
+//        carro1.ano = 2004;
+//        carro1.cor = "Vermelho";
+//
+//        carro1.fichaTecnica();
+//
+//        System.out.println(carro1.anoCarro(carro1.anoCarro(carro1.ano)));
+//
+//    }
 
-    musica1.titulo = "Link Park";
-    musica1.artista = "Chester";
-    musica1.anoLancamento = 2002;
+    public static void main(String[] args) {
 
-    musica1.fichaTecnica();
-    musica1.avaliar(5);
-    musica1.avaliar(3);
-    System.out.println(musica1.somaAvaliacao);
-    System.out.println(musica1.numAvaliacoes);
-    System.out.println(musica1.mediaAvaliacao());
-}
+        Aluno aluno1 = new Aluno();
+
+        aluno1.nome = "Lucas";
+        aluno1.idade = 32;
+
+        aluno1.exibirInformacoes();
+    }
 }
