@@ -22,11 +22,26 @@ public class Principal {
 //        pessoa1.idade = 32;
 //        pessoa1.olaMundo();
 //    }
+//public static void main(String[] args) {
+//
+//    Calculadora multi = new Calculadora();
+//
+//    System.out.println(multi.doubloValor(2));
+//
+//}
 public static void main(String[] args) {
 
-    Calculadora multi = new Calculadora();
+    Musica musica1 = new Musica();
 
-    System.out.println(multi.doubloValor(2));
+    musica1.titulo = "Link Park";
+    musica1.artista = "Chester";
+    musica1.anoLancamento = 2002;
 
+    musica1.fichaTecnica();
+    musica1.avaliar(5);
+    musica1.avaliar(3);
+    System.out.println(musica1.somaAvaliacao);
+    System.out.println(musica1.numAvaliacoes);
+    System.out.println(musica1.mediaAvaliacao());
 }
 }
