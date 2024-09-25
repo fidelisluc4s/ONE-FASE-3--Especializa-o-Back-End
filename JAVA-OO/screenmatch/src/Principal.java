@@ -1,37 +1,25 @@
+import br.com.alura.screenmatch.model.Filme;
+import exerciciosJavaOo.model.IdadePessoa;
+
 public class Principal {
-//    public static void main(String[] args) {
-//        Filme meuFilme = new Filme();
-//
-//        meuFilme.nome = "O poderoso Chefão";
-//        meuFilme.anoDeLancamento = 2017;
-//        meuFilme.duracaoEmMinutos = 180;
-//
-//        meuFilme.exibirFichaTecnica();
-//        meuFilme.avalia(8);
-//        meuFilme.avalia(7);
-//        meuFilme.avalia(10);
-//        System.out.println(meuFilme.somaDeAvaliacoes);
-//        System.out.println(meuFilme.totalDeAvaliacoes);
-//        System.out.println(String.format("%.2f",meuFilme.retornarMedia()));
-//    }
 
 //    public static void main(String[] args) {
 //
-//        Pessoa pessoa1 = new Pessoa();
+//        exercicios.Calculadora.Pessoa pessoa1 = new exercicios.Calculadora.Pessoa();
 //        pessoa1.nome = "Lucas";
 //        pessoa1.idade = 32;
 //        pessoa1.olaMundo();
 //    }
 //public static void main(String[] args) {
 //
-//    Calculadora multi = new Calculadora();
+//    exercicios.Calculadora multi = new exercicios.Calculadora();
 //
 //    System.out.println(multi.doubloValor(2));
 //
 //}
 //public static void main(String[] args) {
 //
-//    Musica musica1 = new Musica();
+//    exercicios.Calculadora.Musica musica1 = new exercicios.Calculadora.Musica();
 //
 //    musica1.titulo = "Link Park";
 //    musica1.artista = "Chester";
@@ -46,7 +34,7 @@ public class Principal {
 //}
 
 //    public static void main(String[] args) {
-//        Carro carro1 = new Carro();
+//        exercicios.Carro carro1 = new exercicios.Carro();
 //
 //        carro1.modeloCarro = "Corsa";
 //        carro1.ano = 2004;
@@ -58,13 +46,38 @@ public class Principal {
 //
 //    }
 
+//    public static void main(String[] args) {
+//
+//        exercicios.Aluno aluno1 = new exercicios.Aluno();
+//
+//        aluno1.nome = "Lucas";
+//        aluno1.idade = 32;
+//
+//        aluno1.exibirInformacoes();
+//    }
+
+//    public static void main(String[] args) {
+//        Filme meuFilme = new Filme();
+//
+//        meuFilme.setNome("O poderoso Chefão");
+//        meuFilme.setAnoDeLancamento(2017);
+//        meuFilme.setDuracaoEmMinutos(180);
+//
+//        meuFilme.exibirFichaTecnica();
+//        meuFilme.avalia(8);
+//        meuFilme.avalia(7);
+//        meuFilme.avalia(10);
+//        System.out.println(meuFilme.getSomaDeAvaliacoes());
+//        System.out.println(meuFilme.getTotalDeAvaliacoes());
+//        System.out.println(String.format("%.2f",meuFilme.retornarMedia()));
+//    }
+
     public static void main(String[] args) {
 
-        Aluno aluno1 = new Aluno();
+        IdadePessoa pessoaIdade = new IdadePessoa();
 
-        aluno1.nome = "Lucas";
-        aluno1.idade = 32;
-
-        aluno1.exibirInformacoes();
+        pessoaIdade.setIdade(32);
+        pessoaIdade.setNome("Lucas");
+        pessoaIdade.verificarIdade();
     }
 }
