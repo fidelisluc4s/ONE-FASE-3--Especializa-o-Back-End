@@ -1,5 +1,6 @@
 import br.com.alura.screenmatch.model.Filme;
 import exerciciosJavaOo.model.IdadePessoa;
+import exerciciosJavaOo.model.Produto;
 
 public class Principal {
 
@@ -71,13 +72,25 @@ public class Principal {
 //        System.out.println(meuFilme.getTotalDeAvaliacoes());
 //        System.out.println(String.format("%.2f",meuFilme.retornarMedia()));
 //    }
+//
+//    public static void main(String[] args) {
+//
+//        IdadePessoa pessoaIdade = new IdadePessoa();
+//
+//        pessoaIdade.setIdade(32);
+//        pessoaIdade.setNome("Lucas");
+//        pessoaIdade.verificarIdade();
+//    }
 
     public static void main(String[] args) {
 
-        IdadePessoa pessoaIdade = new IdadePessoa();
+        Produto produto1 = new Produto("Coca-Cola", 8.00);
 
-        pessoaIdade.setIdade(32);
-        pessoaIdade.setNome("Lucas");
-        pessoaIdade.verificarIdade();
+        System.out.println("Nome do Produto: " + produto1.getNome());
+        System.out.println("Valor: " + produto1.getPreco());
+
+        produto1.aplicarDesconto(10);
+
+        System.out.println("Novo Preço com desconto: "+produto1.getPreco());
     }
 }
