@@ -1,5 +1,7 @@
 import br.com.alura.screenmatch.model.Filme;
+import exerciciosJavaOo.model.Aluno;
 import exerciciosJavaOo.model.IdadePessoa;
+import exerciciosJavaOo.model.Livro;
 import exerciciosJavaOo.model.Produto;
 
 public class Principal {
@@ -82,15 +84,37 @@ public class Principal {
 //        pessoaIdade.verificarIdade();
 //    }
 
+//    public static void main(String[] args) {
+//
+//        Produto produto1 = new Produto("Coca-Cola", 8.00);
+//
+//        System.out.println("Nome do Produto: " + produto1.getNome());
+//        System.out.println("Valor: " + produto1.getPreco());
+//
+//        produto1.aplicarDesconto(10);
+//
+//        System.out.println("Novo Preço com desconto: "+produto1.getPreco());
+//    }
+
+//    public static void main(String[] args) {
+//
+//        Aluno aluno1 = new Aluno("Lucas", 9, 10,7);
+//
+//        System.out.println(aluno1.getNome());
+//        System.out.println(aluno1.getNota1());
+//        System.out.println(aluno1.getNota2());
+//        System.out.println(aluno1.getNota3());
+//
+//        System.out.println(String.format("O aluno: %s\nAs médias das notas é: %.2f ",aluno1.getNome(),aluno1.calcularMedia()));
+//
+//    }
+
     public static void main(String[] args) {
 
-        Produto produto1 = new Produto("Coca-Cola", 8.00);
+        Livro livro1 = new Livro("Harry Potter", "J.Rowlden");
 
-        System.out.println("Nome do Produto: " + produto1.getNome());
-        System.out.println("Valor: " + produto1.getPreco());
+        System.out.println("Titulo: "+ livro1.getTitulo());
+        System.out.println("Autor: "+ livro1.getAutor());
 
-        produto1.aplicarDesconto(10);
-
-        System.out.println("Novo Preço com desconto: "+produto1.getPreco());
     }
 }
