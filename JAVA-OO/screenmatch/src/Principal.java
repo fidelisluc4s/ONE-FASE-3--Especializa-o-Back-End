@@ -1,10 +1,50 @@
+import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.model.Filme;
+import br.com.alura.screenmatch.model.Serie;
+import br.com.alura.screenmatch.model.Titulo;
 import exerciciosJavaOo.model.Aluno;
 import exerciciosJavaOo.model.IdadePessoa;
 import exerciciosJavaOo.model.Livro;
 import exerciciosJavaOo.model.Produto;
 
+
 public class Principal {
+
+    public static void main(String[] args) {
+
+        Filme meuFilme = new Filme();
+        meuFilme.setNome("O poderoso chefão");
+        meuFilme.setAnoDeLancamento(1970);
+        meuFilme.setDuracaoEmMinutos(180);
+
+        Serie serie1 = new Serie();
+        serie1.setNome("Sobre Natural");
+        serie1.setEpisodiosPorTemporada(20);;
+        serie1.setTemporadas(18);
+        serie1.setMinutosPorEpisodio(45);
+        System.out.println("Duração do Serie "+serie1.getDuracaoEmMinutos());
+
+        Filme outroFilme = new Filme();
+        outroFilme.setNome("Harry Potter");
+        outroFilme.setAnoDeLancamento(2000);
+        outroFilme.setDuracaoEmMinutos(200);
+
+        CalculadoraDeTempo calcu = new CalculadoraDeTempo();
+        System.out.println(meuFilme.getDuracaoEmMinutos());
+        calcu.inclui(meuFilme);
+        calcu.inclui(outroFilme);
+        calcu.inclui(serie1);
+        System.out.println("Tempo: "+calcu.getTempoTotal());
+
+    }
+
+
+
+}
+
+
+
+
 
 //    public static void main(String[] args) {
 //
@@ -59,22 +99,7 @@ public class Principal {
 //        aluno1.exibirInformacoes();
 //    }
 
-//    public static void main(String[] args) {
-//        Filme meuFilme = new Filme();
-//
-//        meuFilme.setNome("O poderoso Chefão");
-//        meuFilme.setAnoDeLancamento(2017);
-//        meuFilme.setDuracaoEmMinutos(180);
-//
-//        meuFilme.exibirFichaTecnica();
-//        meuFilme.avalia(8);
-//        meuFilme.avalia(7);
-//        meuFilme.avalia(10);
-//        System.out.println(meuFilme.getSomaDeAvaliacoes());
-//        System.out.println(meuFilme.getTotalDeAvaliacoes());
-//        System.out.println(String.format("%.2f",meuFilme.retornarMedia()));
-//    }
-//
+
 //    public static void main(String[] args) {
 //
 //        IdadePessoa pessoaIdade = new IdadePessoa();
@@ -109,12 +134,12 @@ public class Principal {
 //
 //    }
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
+//
+//        Livro livro1 = new Livro("Harry Potter", "J.Rowlden");
+//
+//        System.out.println("Titulo: "+ livro1.getTitulo());
+//        System.out.println("Autor: "+ livro1.getAutor());
+//
+//    }
 
-        Livro livro1 = new Livro("Harry Potter", "J.Rowlden");
-
-        System.out.println("Titulo: "+ livro1.getTitulo());
-        System.out.println("Autor: "+ livro1.getAutor());
-
-    }
-}
