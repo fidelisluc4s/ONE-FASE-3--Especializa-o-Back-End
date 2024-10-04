@@ -1,4 +1,6 @@
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
+import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
+import br.com.alura.screenmatch.model.Episodio;
 import br.com.alura.screenmatch.model.Filme;
 import br.com.alura.screenmatch.model.Serie;
 import br.com.alura.screenmatch.model.Titulo;
@@ -16,6 +18,7 @@ public class Principal {
         meuFilme.setNome("O poderoso chefão");
         meuFilme.setAnoDeLancamento(1970);
         meuFilme.setDuracaoEmMinutos(180);
+        meuFilme.avalia(5);
 
         Serie serie1 = new Serie();
         serie1.setNome("Sobre Natural");
@@ -28,6 +31,7 @@ public class Principal {
         outroFilme.setNome("Harry Potter");
         outroFilme.setAnoDeLancamento(2000);
         outroFilme.setDuracaoEmMinutos(200);
+        outroFilme.avalia(3);
 
         CalculadoraDeTempo calcu = new CalculadoraDeTempo();
         System.out.println(meuFilme.getDuracaoEmMinutos());
@@ -35,6 +39,15 @@ public class Principal {
         calcu.inclui(outroFilme);
         calcu.inclui(serie1);
         System.out.println("Tempo: "+calcu.getTempoTotal());
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(outroFilme);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setSerie(serie1);
+        episodio.setTotalVisualizacoes(300);
+        filtro.filtra(episodio);
 
     }
 

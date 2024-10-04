@@ -21,19 +21,19 @@ public abstract class Titulo {
     public void setDuracaoEmMinutos(int duracaoEmMinutos){
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
-    double getSomaDeAvaliacoes(){
+    public double getSomaDeAvaliacoes(){
         return somaDeAvaliacoes;
     }
-    private void exibirFichaTecnica(){
+    public void exibirFichaTecnica(){
         System.out.println("Nome do filme: "+nome);
         System.out.println("Ano de lançamento: "+anoDeLancamento);
         System.out.println("Tempo do filme: "+duracaoEmMinutos);
     }
-    private void avalia(double nota){
+    public void avalia(double nota){
         somaDeAvaliacoes += nota;
         totalDeAvaliacoes++;
     }
-    private double retornarMedia(){
+    public double retornarMedia(){
         return somaDeAvaliacoes / totalDeAvaliacoes;
     }
     public int getDuracaoEmMinutos(){
