@@ -1,2 +1,8 @@
-package models;public interface CalculoGeometrico {
+package models;
+
+public interface CalculoGeometrico {
+
+    void calcularArea(double altura, double largura);
+
+    void calcularPerimetro(double lado);
 }
