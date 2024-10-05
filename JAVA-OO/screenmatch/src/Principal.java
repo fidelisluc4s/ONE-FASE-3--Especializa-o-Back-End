@@ -16,22 +16,17 @@ public class Principal {
 
     public static void main(String[] args) {
 
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("O poderoso chefão");
-        meuFilme.setAnoDeLancamento(1970);
+        Filme meuFilme = new Filme("O poderoso chefão",1970);
         meuFilme.setDuracaoEmMinutos(180);
         meuFilme.avalia(5);
 
-        Serie serie1 = new Serie();
-        serie1.setNome("Sobre Natural");
+        Serie serie1 = new Serie("Sobre Natural",2005);
         serie1.setEpisodiosPorTemporada(20);;
         serie1.setTemporadas(18);
         serie1.setMinutosPorEpisodio(45);
         System.out.println("Duração do Serie "+serie1.getDuracaoEmMinutos());
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Harry Potter");
-        outroFilme.setAnoDeLancamento(2000);
+        Filme outroFilme = new Filme("Harry Potter",2000);
         outroFilme.setDuracaoEmMinutos(200);
         outroFilme.avalia(3);
 
@@ -51,10 +46,8 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        var filmeDoPaulo = new Filme();
-        filmeDoPaulo.setNome("Dogville");
+        var filmeDoPaulo = new Filme("Dogville", 2003);
         filmeDoPaulo.setDuracaoEmMinutos(200);
-        filmeDoPaulo.setAnoDeLancamento(2003);
         filmeDoPaulo.avalia(10);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();

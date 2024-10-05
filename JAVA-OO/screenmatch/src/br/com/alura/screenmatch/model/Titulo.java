@@ -9,6 +9,9 @@ public abstract class Titulo {
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
 
+    public Titulo(String nome, int anoDeLancamento) {
+    }
+
     public int getTotalDeAvaliacoes(){
         return totalDeAvaliacoes;
     }
