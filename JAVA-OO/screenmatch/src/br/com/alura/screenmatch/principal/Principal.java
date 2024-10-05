@@ -1,13 +1,10 @@
+package br.com.alura.screenmatch.principal;
+
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.model.Episodio;
 import br.com.alura.screenmatch.model.Filme;
 import br.com.alura.screenmatch.model.Serie;
-import br.com.alura.screenmatch.model.Titulo;
-import exerciciosJavaOo.model.Aluno;
-import exerciciosJavaOo.model.IdadePessoa;
-import exerciciosJavaOo.model.Livro;
-import exerciciosJavaOo.model.Produto;
 
 import java.util.ArrayList;
 
