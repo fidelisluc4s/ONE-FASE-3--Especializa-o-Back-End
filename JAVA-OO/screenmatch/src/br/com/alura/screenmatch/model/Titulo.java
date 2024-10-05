@@ -12,6 +12,15 @@ public abstract class Titulo {
     public int getTotalDeAvaliacoes(){
         return totalDeAvaliacoes;
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
+    }
+
     public void setNome(String nome){
         this.nome = nome;
     }
