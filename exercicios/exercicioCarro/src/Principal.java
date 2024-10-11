@@ -25,8 +25,5 @@ public class Principal {
         carro2.exibirInformacoes();
         carro2.precoMedioAno();
 
-
-
-
     }
 }
