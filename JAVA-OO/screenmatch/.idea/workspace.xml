@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6277a32d-221c-40dd-86e9-64303f2beb29" name="Changes" comment="" />
+    <list default="true" id="6277a32d-221c-40dd-86e9-64303f2beb29" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../exercicios/exercicioGsonJson/src/models/Pessoa.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +41,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Curso Alura/dependencia/gson-2.10.1.jar",
+    "last_opened_file_path": "D:/Curso Alura/SmartGit/ONE-FASE-3/exercicios",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
