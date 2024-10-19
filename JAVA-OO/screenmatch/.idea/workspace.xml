@@ -5,6 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6277a32d-221c-40dd-86e9-64303f2beb29" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../exercicios/exercicioGsonJson/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercicios/exercicioGsonJson/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercicios/exercicioGsonJson/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercicios/exercicioGsonJson/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercicios/exercicioGsonJson/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercicios/exercicioGsonJson/exercicioGsonJson.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercicios/exercicioGsonJson/src/Main.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../exercicios/exercicioGsonJson/src/models/Pessoa.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
