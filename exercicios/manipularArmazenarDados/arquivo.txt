@@ -1,0 +1,8 @@
+{
+  "NomeVeiculo": "Corsa",
+  "Ano": 2000,
+  "Cor": "vermelho"
+}{
+  "NomeTitulo": "Harry Potter",
+  "AnoLancamento": 2000
+}
