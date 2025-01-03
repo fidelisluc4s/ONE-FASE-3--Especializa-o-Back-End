@@ -7,6 +7,8 @@ import br.com.alura.screenmatch.model.Episodio;
 import br.com.alura.screenmatch.service.ConsumoApi;
 import br.com.alura.screenmatch.service.ConverteDados;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -17,7 +19,7 @@ public class Principal {
     private ConsumoApi cosumo = new ConsumoApi();
     private ConverteDados conversor = new ConverteDados();
 
-    public void exibeMenu(){
+    public void exibeMenu() {
         System.out.println("Digite o nome da série para busca");
         var nomeSerie = leitura.nextLine();
         var json = cosumo.obterDados(ENDERECO + nomeSerie.replace(" ", "+") + API_KEY);
@@ -25,18 +27,18 @@ public class Principal {
         System.out.println(dados);
 
 
-		List<DadosTemporada> temporadas = new ArrayList<>();
+        List<DadosTemporada> temporadas = new ArrayList<>();
 
-		for (int i = 1; i <= dados.totalTemporadas(); i++){
-			json = cosumo.obterDados(ENDERECO + nomeSerie.replace(" ", "+") +"&season="+ i + API_KEY);
-			DadosTemporada dadosTemporada = conversor.obterDados(json, DadosTemporada.class);
-			temporadas.add(dadosTemporada);
-		}
-		temporadas.forEach(System.out::println);
+        for (int i = 1; i <= dados.totalTemporadas(); i++) {
+            json = cosumo.obterDados(ENDERECO + nomeSerie.replace(" ", "+") + "&season=" + i + API_KEY);
+            DadosTemporada dadosTemporada = conversor.obterDados(json, DadosTemporada.class);
+            temporadas.add(dadosTemporada);
+        }
+        temporadas.forEach(System.out::println);
 
-        for (int i = 0; i < dados.totalTemporadas(); i++){
+        for (int i = 0; i < dados.totalTemporadas(); i++) {
             List<DadosEpisodio> episodiosTemporada = temporadas.get(i).episodios();
-            for (int j = 0; j < episodiosTemporada.size(); j++){
+            for (int j = 0; j < episodiosTemporada.size(); j++) {
                 System.out.println(episodiosTemporada.get(j).titulo());
             }
         }
@@ -67,9 +69,24 @@ public class Principal {
 
         List<Episodio> episodios = temporadas.stream()
                 .flatMap(t -> t.episodios().stream()//usando uma lista dentro de outra lista - é diferente do MAP
-                .map(d -> new Episodio(t.numero(), d))//transformar cada dados episodio em novos episodios
+                        .map(d -> new Episodio(t.numero(), d))//transformar cada dados episodio em novos episodios
                 ).collect(Collectors.toList());
 
         episodios.forEach(System.out::println);
+
+        System.out.println("A partir de que ano você deseja ver os episodios? ");
+        var ano = leitura.nextInt();
+        leitura.nextLine();
+
+        LocalDate dataBusca = LocalDate.of(ano, 1, 1);//se o usario digitar 2015 eu quero q apareça apartir do ano ano-1-1
+
+        DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy");//formato do brazil
+        episodios.stream()
+                .filter(e -> e.getDataLancamento() != null && e.getDataLancamento().isAfter(dataBusca))//quero um episidio q seja da data de lançamento apois da data que eu digitei. e não pode ser nula
+                .forEach(e -> System.out.println(
+                        "Temporada: " + e.getTemporada() +
+                                " Episodio: " + e.getNumeroEpisodio() +
+                                " Data Lançamento" + e.getDataLancamento().format(formatador)
+                ));
     }
 }
